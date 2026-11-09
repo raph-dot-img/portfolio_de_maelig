@@ -4,15 +4,15 @@ Notes pour les futures sessions de Claude Code sur ce dépôt.
 
 ## Le projet
 
-CV en ligne de Maëlig Chaussy (élève en Seconde Bac Pro CIEL). Tout le site est en français.
+CV en ligne de Maëlig Chaussy (élève en Seconde Bac Pro CIEL), publié sur https://maelig.eu. Tout le site est en français.
 L'infrastructure reprend celle du portfolio de Jean-Baptiste (`raph-dot-img/portfolio_de_jb`), sans son contenu.
 
 - Site statique : `index.html`, `confidentialite.html`, `style.css`. Aucun framework, aucun build, pas de JavaScript pour l'instant.
 - Couleurs en variables CSS dans `:root` (sarcelle `#0f6e6e`), avec un thème sombre via `prefers-color-scheme`. Polices système uniquement.
 - Noms de classes et commentaires en français. Le site vouvoie le visiteur.
-- Le domaine n'est pas encore choisi : `exemple.fr` sert d'emplacement (README, « Avant la mise en ligne »).
+- Contacts : `privacy@canevet.eu` (RGPD), `webmaster@canevet.eu` (serveur, journaux), issues GitHub pour les problèmes du site.
 - Pas de téléphone ni d'adresse postale sur le site (Maëlig est mineur·e) : seulement l'adresse mail dédiée.
-- `confidentialite.html` est un texte provisoire : les parties « À compléter » attendent le propriétaire du dépôt.
+- Le texte de `confidentialite.html` est fourni par le propriétaire du dépôt : n'en changer le fond qu'à sa demande. La partie « Hébergement » est encore « À compléter ».
 
 ## Contraintes à respecter
 

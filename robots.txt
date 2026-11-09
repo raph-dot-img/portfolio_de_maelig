@@ -4,5 +4,4 @@ Allow: /
 # Pages d'erreur
 Disallow: /erreurs/
 
-# À FAIRE : remplacer exemple.fr par le vrai domaine
-Sitemap: https://exemple.fr/sitemap.xml
+Sitemap: https://maelig.eu/sitemap.xml

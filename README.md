@@ -1,6 +1,6 @@
 # Portfolio de Maëlig
 
-Code source du CV en ligne de **Maëlig Chaussy**.
+Code source du CV en ligne de **Maëlig Chaussy**, publié sur [maelig.eu](https://maelig.eu).
 
 Site statique (HTML et CSS, sans JavaScript ni dépendance) servi par nginx dans Docker, et exposé sur Internet par un tunnel [FRP](https://github.com/fatedier/frp).
 
@@ -19,14 +19,6 @@ docker compose up -d
 
 Après une modification d'un fichier du site : `docker compose restart portfolio` (les fichiers sont montés un par un, et beaucoup d'éditeurs remplacent le fichier au lieu de le modifier, ce que le conteneur ne voit pas).
 
-### Avant la mise en ligne
-
-Le domaine n'est pas encore choisi : remplacer `exemple.fr` partout où il apparaît.
-
-```sh
-grep -rn "exemple\.fr" --exclude=.env.example .
-```
-
 ## Développement
 
 ```sh
@@ -38,3 +30,5 @@ Serveur de développement uniquement : il reproduit les pages d'erreur et la pag
 ## Licence
 
 Ce projet est distribué sous la **Microsoft Reference Source License (Ms-RSL)** : le code peut être consulté, mais pas réutilisé, modifié ni redistribué. Consultez le fichier [LICENSE](LICENSE) pour les détails.
+
+Un problème sur le site ? Ouvrez une [issue](https://github.com/raph-dot-img/portfolio_de_maelig/issues/).
