@@ -12,7 +12,7 @@ L'infrastructure reprend celle du portfolio de Jean-Baptiste (`raph-dot-img/port
 - Noms de classes et commentaires en français. Le site vouvoie le visiteur.
 - Contacts : `privacy@canevet.eu` (RGPD), `webmaster@canevet.eu` (serveur, journaux), issues GitHub pour les problèmes du site.
 - Pas de téléphone ni d'adresse postale sur le site (Maëlig est mineur·e) : seulement l'adresse mail dédiée.
-- Le texte de `confidentialite.html` est fourni par le propriétaire du dépôt : n'en changer le fond qu'à sa demande. La partie « Hébergement » est encore « À compléter ».
+- Le texte de `confidentialite.html` est fourni par le propriétaire du dépôt : n'en changer le fond qu'à sa demande.
 
 ## Contraintes à respecter
 
@@ -21,7 +21,7 @@ L'infrastructure reprend celle du portfolio de Jean-Baptiste (`raph-dot-img/port
 
 ## Infrastructure
 
-- `docker-compose.yml` : `portfolio` (nginx:alpine, port local 45889) + `frpc` (tunnel TCP vers le serveur FRP). Le HTTPS est terminé par Nginx Reverse Proxy sur le serveur distant.
+- `docker-compose.yml` : `portfolio` (nginx:alpine, port local 45889) + `frpc` (tunnel TCP vers le serveur FRP). Le HTTPS est terminé par Nginx Reverse Proxy sur le serveur distant (VPS Kyun.sh). Serveur et relais sont gérés par Raphaël, comme pour le site de JB.
 - Le proxy FRP s'appelle `portfolio_maelig` et le port distant est distinct de celui de JB : les deux sites peuvent partager le même frps.
 - La vraie IP du visiteur vient de `X-Forwarded-For` (module realip, adresses privées de confiance).
 - Les fichiers du site sont montés un par un. **Toute nouvelle page publique** doit être ajoutée dans les volumes de `docker-compose.yml` ET dans `RACINES_PUBLIQUES` de `serve.py`, et si besoin dans `sitemap.xml`.
