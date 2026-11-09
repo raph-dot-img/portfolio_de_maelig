@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Pages d'erreur
+Disallow: /erreurs/
+
+Sitemap: https://maelig.eu/sitemap.xml

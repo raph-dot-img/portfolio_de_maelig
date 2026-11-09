@@ -1,0 +1,31 @@
+# Configuration du client FRP.
+# Les valeurs sensibles viennent du fichier .env via les variables
+# d'environnement du conteneur, rien n'est écrit en dur ici.
+
+serverAddr = "{{ .Envs.FRP_SERVER_ADDRESS }}"
+serverPort = {{ .Envs.FRP_SERVER_BIND_PORT }}
+
+auth.method = "token"
+auth.token = "{{ .Envs.FRP_AUTH_TOKEN }}"
+
+log.to = "console"
+log.level = "info"
+
+# Reconnexion automatique si le serveur devient injoignable
+loginFailExit = false
+
+[[proxies]]
+# Nom unique sur le serveur frps : s'il est partagé avec d'autres sites
+# (portfolio_jb...), deux proxys du même nom se bloqueraient.
+name = "portfolio_maelig"
+type = "tcp"
+# Nom du service dans la stack : frpc joint nginx par le réseau Docker,
+# sans qu'aucun port n'ait besoin d'être publié sur l'hôte.
+localIP = "portfolio"
+localPort = 80
+remotePort = {{ .Envs.FRP_SERVER_REMOTE_PORT }}
+
+# Tunnel TCP brut : le HTTPS est terminé par Nginx Reverse Proxy sur le serveur
+# distant, qui doit transmettre l'en-tête X-Forwarded-For (comportement par
+# défaut de Nginx Proxy Manager). C'est grâce à lui que nginx retrouve la
+# vraie IP du visiteur (voir set_real_ip_from dans nginx/default.conf).

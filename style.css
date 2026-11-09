@@ -1,0 +1,191 @@
+/* ===== COULEURS : changez-les ici, tout le site suit ===== */
+:root {
+  --fond: #eef2f5;
+  --carte: #ffffff;
+  --texte: #1b2733;
+  --texte-doux: #5a6a78;
+  --accent: #0f6e6e;
+  --accent-doux: #e2f1f1;
+  --trait: #d8e0e6;
+  --ombre: 0 1px 2px rgba(27, 39, 51, 0.06), 0 6px 18px rgba(27, 39, 51, 0.05);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #0f161c;
+    --carte: #19232b;
+    --texte: #e8eef2;
+    --texte-doux: #9fb0bd;
+    --accent: #4fc3c3;
+    --accent-doux: #1f3a3f;
+    --trait: #2a3844;
+    --ombre: none;
+  }
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; line-height: 1.25; }
+a { color: var(--accent); text-underline-offset: 3px; }
+
+/* ===== MISE EN PAGE : colonne de gauche + contenu ===== */
+.page {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+  max-width: 1020px;
+  margin: 0 auto;
+  gap: 32px;
+  padding: 48px 24px;
+}
+
+/* Carte d'identité, qui reste visible quand on fait défiler */
+.profil {
+  position: sticky;
+  top: 32px;
+  align-self: start;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-top: 5px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: var(--ombre);
+  padding: 28px 26px;
+}
+.profil h1 { font-size: 1.9rem; margin: 0 0 6px; }
+.metier { color: var(--accent); font-weight: 600; margin: 0 0 20px; }
+.contact { list-style: none; padding: 16px 0 0; margin: 0; border-top: 1px solid var(--trait); }
+.contact li { word-break: break-word; }
+
+/* ===== SECTIONS ===== */
+section {
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-radius: 12px;
+  box-shadow: var(--ombre);
+  padding: 28px 32px;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 1.35rem;
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent);
+}
+h3 { font-size: 1.05rem; margin: 0; }
+
+/* Un bloc de stage, de projet ou de formation : trait à gauche comme une frise */
+.poste {
+  margin-bottom: 22px;
+  padding-left: 18px;
+  border-left: 2px solid var(--trait);
+}
+.poste:last-child { margin-bottom: 0; }
+.periode { color: var(--texte-doux); font-size: 0.9rem; margin: 2px 0 6px; }
+.poste p, .poste ul { margin: 0; }
+.poste ul { padding-left: 20px; }
+
+/* Les compétences et intérêts sous forme d'étiquettes */
+.etiquettes { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+.etiquettes li {
+  background: var(--accent-doux);
+  color: var(--texte);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 0.95rem;
+}
+
+/* ===== TÉLÉPHONE : une seule colonne ===== */
+@media (max-width: 760px) {
+  .page { grid-template-columns: 1fr; gap: 20px; padding: 20px 14px; }
+  .profil { position: static; padding: 22px 20px; }
+  section { padding: 22px 18px; }
+  .poste { padding-left: 14px; }
+}
+
+/* ===== PIED DE PAGE ===== */
+.pied {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  color: var(--texte-doux);
+  font-size: 0.9rem;
+  text-align: center;
+}
+.pied p { margin: 0 0 6px; }
+.pied nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; }
+
+/* ===== PAGES DE TEXTE (confidentialité) ===== */
+.page-texte {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 24px 24px;
+}
+.page-texte h1 { font-size: 2rem; margin: 0 0 20px; }
+.retour { display: inline-block; margin-bottom: 24px; }
+.encart {
+  background: var(--accent-doux);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+/* ===== PAGES D'ERREUR ===== */
+.page-erreur {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+.erreur {
+  max-width: 520px;
+  text-align: center;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-top: 5px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: var(--ombre);
+  padding: 32px 28px;
+}
+.erreur-code {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 4.5rem;
+  line-height: 1;
+  color: var(--accent);
+  margin: 0 0 8px;
+}
+.erreur h1 { font-size: 1.4rem; margin: 0 0 12px; }
+.erreur-ip strong { font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+.erreur-chat {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  color: var(--accent);
+  line-height: 1.2;
+  margin: 0 auto 16px;
+}
+.bouton {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--accent);
+  color: var(--carte);
+  border-radius: 8px;
+  padding: 8px 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+/* ===== IMPRESSION : un CV propre sur papier ===== */
+@media print {
+  body { background: #fff; }
+  .page { padding: 0; }
+  .profil { position: static; }
+  section, .profil { box-shadow: none; break-inside: avoid; }
+  .pied nav { display: none; }
+}
