@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Pages d'erreur
+Disallow: /erreurs/
+
+# À FAIRE : remplacer exemple.fr par le vrai domaine
+Sitemap: https://exemple.fr/sitemap.xml
