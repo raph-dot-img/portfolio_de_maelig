@@ -1,0 +1,46 @@
+Ce que couvre la licence MIT de LICENSE, et ce qu'elle ne couvre pas
+====================================================================
+
+En bref : le code est libre de réutilisation. Le contenu personnel de
+Maëlig, lui, ne l'est pas.
+
+
+1. Couvert par la licence MIT (voir LICENSE)
+--------------------------------------------
+
+- Le code source du site : balisage HTML, CSS, configuration nginx,
+  Docker et FRP, serve.py.
+- Les textes génériques de l'interface (pages d'erreur, liens du pied
+  de page).
+
+Vous pouvez les utiliser, copier, modifier et redistribuer, y compris à des
+fins commerciales, à condition de conserver la mention de copyright et le
+texte de LICENSE.
+
+
+2. NON couvert : le contenu personnel, tous droits réservés
+-----------------------------------------------------------
+
+Le contenu suivant concerne Maëlig Chaussy. Il est exclu de la licence MIT
+et reste tous droits réservés :
+
+- les textes du CV en ligne (index.html : profil, projets et stages,
+  formation, compétences, centres d'intérêt, langues, coordonnées) et la politique
+  de confidentialité (confidentialite.html) ;
+- son nom, son identité, ses adresses mail et autres coordonnées, où
+  qu'ils apparaissent dans les fichiers (texte des pages, balises meta).
+
+Une bonne partie de ce contenu relève des données personnelles, protégées
+par le RGPD indépendamment de toute licence. Maëlig est mineur·e : merci
+tout particulièrement de ne pas les réutiliser, et de ne pas usurper son
+identité.
+
+Si vous réutilisez le code pour votre propre site, remplacez tout ce
+contenu par le vôtre avant de le publier. Le nom de domaine (maelig.eu)
+est propre à ce site : remplacez-le aussi.
+
+
+3. Éléments tiers
+-----------------
+
+Aucun pour l'instant : le site n'utilise que les polices du système.

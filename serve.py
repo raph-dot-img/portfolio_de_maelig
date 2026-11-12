@@ -46,6 +46,7 @@ RACINES_PUBLIQUES = {
     "index.html",
     "confidentialite.html",
     "LICENSE",
+    "NOTICE",
     "style.css",
     "robots.txt",
     "sitemap.xml",
@@ -65,7 +66,7 @@ class Handler(SimpleHTTPRequestHandler):
         return self.path.split("?", 1)[0].split("#", 1)[0]
 
     def guess_type(self, path):
-        if Path(path).name == "LICENSE":
+        if Path(path).name in ("LICENSE", "NOTICE"):
             return "text/plain; charset=utf-8"
         return super().guess_type(path)
 

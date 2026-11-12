@@ -23,6 +23,7 @@ services:
       - ./index.html:/usr/share/nginx/html/index.html:ro
       - ./confidentialite.html:/usr/share/nginx/html/confidentialite.html:ro
       - ./LICENSE:/usr/share/nginx/html/LICENSE:ro
+      - ./NOTICE:/usr/share/nginx/html/NOTICE:ro
       - ./style.css:/usr/share/nginx/html/style.css:ro
       - ./robots.txt:/usr/share/nginx/html/robots.txt:ro
       - ./sitemap.xml:/usr/share/nginx/html/sitemap.xml:ro

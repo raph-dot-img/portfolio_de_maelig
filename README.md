@@ -29,6 +29,7 @@ Serveur de développement uniquement : il reproduit les pages d'erreur et la pag
 
 ## Licence
 
-Ce projet est distribué sous la **Microsoft Reference Source License (Ms-RSL)** : le code peut être consulté, mais pas réutilisé, modifié ni redistribué. Consultez le fichier [LICENSE](LICENSE) pour les détails.
+- **Le code est sous licence [MIT](LICENSE)** : vous pouvez le réutiliser, le modifier et le redistribuer librement, en gardant la mention de copyright.
+- **Le contenu personnel de Maëlig en est exclu** et reste tous droits réservés : textes du CV, politique de confidentialité, nom, coordonnées. Ce sont des données personnelles, et Maëlig est mineur·e : merci de ne pas les réutiliser. Si vous reprenez le code, remplacez tout ce contenu par le vôtre. Le détail est dans [NOTICE](NOTICE).
 
 Un problème sur le site ? Ouvrez une [issue](https://github.com/raph-dot-img/portfolio_de_maelig/issues/).

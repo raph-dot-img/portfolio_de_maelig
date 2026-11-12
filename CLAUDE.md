@@ -43,4 +43,4 @@ L'infrastructure reprend celle du portfolio de Jean-Baptiste (`raph-dot-img/port
 
 ## Licence
 
-Code sous Microsoft Reference Source License, Ms-RSL (`LICENSE`).
+Code sous licence MIT (`LICENSE`). Le contenu personnel de Maëlig (textes du CV, coordonnées, politique de confidentialité) est **exclu** de la MIT et reste tous droits réservés : le périmètre exact est dans `NOTICE`, servi en texte brut sur `/NOTICE` comme `/LICENSE` (lien « Licence » du pied de page). À mettre à jour si un fichier personnel (photo, document...) ou un élément tiers entre dans le dépôt.
